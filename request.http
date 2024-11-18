@@ -1,3 +1,7 @@
+Get http://localhost:3000/auth/1
+
+
+
 Post http://localhost:3000/auth/signup
 Content-Type: application/json
 
@@ -5,3 +9,5 @@ Content-Type: application/json
     "email": "hanzlasib@gmail.com",
     "password": "123456"
 }
+
+
