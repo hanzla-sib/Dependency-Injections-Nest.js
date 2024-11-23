@@ -14,3 +14,13 @@ Content-Type: application/json
 ###find all users with given email
 
 GET http://localhost:3000/auth?email=hanzlasib@gmail.com
+
+DELETE http://localhost:3000/auth/1
+
+
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email": "aaaaa@aaaa.com",
+}
