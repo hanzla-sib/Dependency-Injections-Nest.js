@@ -8,6 +8,8 @@ import {
   Post,
   Query,
   NotFoundException,
+  UseInterceptors,
+  ClassSerializerInterceptor,
 } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/UpdateUserDto';
@@ -25,6 +27,7 @@ export class UsersController {
     return this.userService.find(email);
   }
 
+  @UseInterceptors(ClassSerializerInterceptor)
   @Get('/:id')
   async getById(@Param('id') id: string) {
     const userF = await this.userService.findOne(parseInt(id));
