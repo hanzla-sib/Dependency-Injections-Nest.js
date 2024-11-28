@@ -1,101 +1,134 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+### Documentation for Imports from `@nestjs/common`
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+- **`Body`**: A decorator that extracts the entire body of a request. It is used in the method parameter to access the request body.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- **`Controller`**: A decorator that marks a class as a NestJS controller. Controllers are responsible for handling incoming requests and returning responses to the client.
 
-## Description
+- **`Patch`**: A decorator that defines a route handler for HTTP PATCH requests. It is used to update partial resources.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **`Delete`**: A decorator that defines a route handler for HTTP DELETE requests. It is used to delete resources.
 
-## Project setup
+- **`Get`**: A decorator that defines a route handler for HTTP GET requests. It is used to retrieve resources.
 
-```bash
-$ npm install
-```
+- **`Param`**: A decorator that extracts a specific parameter from the request. It is used in the method parameter to access route parameters.
 
-## Compile and run the project
+- **`Post`**: A decorator that defines a route handler for HTTP POST requests. It is used to create new resources.
 
-```bash
-# development
-$ npm run start
+- **`Query`**: A decorator that extracts query parameters from the request. It is used in the method parameter to access query string parameters.
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+- **`NotFoundException`**: An exception that is thrown when a requested resource is not found. It results in a 404 HTTP response.
 
 
+
+## Imports in `users.service.ts`
+
+### Imports from `@nestjs/common`
+
+- **`Injectable`**:
+  - **Description**: A decorator that marks a class as a provider that can be injected into other classes via dependency injection.
+  - **Usage**: Used to define a service class in NestJS.
+  - **Example**:
+    ```typescript
+    @Injectable()
+    export class UsersService {
+      // Service logic here
+    }
+    ```
+
+- **`NotFoundException`**:
+  - **Description**: An exception that is thrown when a requested resource is not found.
+  - **Usage**: Used to handle cases where a resource is not found, resulting in a 404 HTTP response.
+  - **Example**:
+    ```typescript
+    throw new NotFoundException(`User with ID ${id} not found`);
+    ```
+
+### Imports from `typeorm`
+
+- **`Repository`**:
+  - **Description**: A class that provides an abstraction layer for database operations.
+  - **Usage**: Used to interact with the database in a type-safe manner.
+  - **Example**:
+    ```typescript
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>;
+    ```
+
+### Imports from `@nestjs/typeorm`
+
+- **`InjectRepository`**:
+  - **Description**: A decorator that injects a TypeORM repository into a service.
+  - **Usage**: Used to access the repository for a specific entity within a service class.
+  - **Example**:
+    ```typescript
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>;
+    ```
+
+
+
+    ## `user.dto.ts` Documentation
+
+### Imports
+
+- **`class-transformer`**:
+  - **`Expose`**: A decorator that marks a property to be included in the transformation process.
+  - **`Exclude`**: A decorator that marks a property to be excluded from the transformation process.
+
+### `UserDto` Class
+
+The `UserDto` class is a Data Transfer Object (DTO) used to define the structure of user data that is transferred between different parts of the application.
+
+#### Properties
+
+- **`id`**:
+  - **Type**: `number`
+  - **Decorators**: `@Expose()`
+  - **Description**: The unique identifier for the user. This property is included in the transformation process.
+
+- **`email`**:
+  - **Type**: `string`
+  - **Decorators**: `@Expose()`
+  - **Description**: The email address of the user. This property is included in the transformation process.
+
+### Example Usage
+
+```typescript
+import { Expose } from 'class-transformer';
+
+export class UserDto {
+  @Expose()
+  id: number;
+
+  @Expose()
+  email: string;
+}
+
+
+
+
+## `serialize.interceptor.ts` Documentation
+
+### Imports
+
+- **`@nestjs/common`**:
+  - **`UseInterceptors`**: A decorator that applies interceptors to a route handler or controller.
+  - **`NestInterceptor`**: An interface that defines the contract for NestJS interceptors.
+  - **`ExecutionContext`**: Provides methods to access the details about the current request.
+  - **`CallHandler`**: Provides methods to handle the request and response.
+
+- **`rxjs/operators`**:
+  - **`map`**: An operator that applies a given function to each value emitted by the source Observable.
+
+- **`rxjs`**:
+  - **`Observable`**: Represents a stream of data that can be observed.
+
+- **`class-transformer`**:
+  - **`plainToClass`**: A function that transforms plain JavaScript objects into instances of a given class.
+
+### `Serialize` Function
+
+```typescript
+export function Serialize(dto: any) {
+  return UseInterceptors(new SerializeInterceptor(dto));
+}
