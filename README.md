@@ -25,6 +25,14 @@
 ### Imports from `@nestjs/common`
 
 - **`Injectable`**:
+
+Flow Summary
+UserService is defined and registered in UserModule.
+UserModule exports UserService so it can be used in other modules.
+AdminModule imports UserModule to gain access to UserService.
+AdminController injects UserService and calls its methods.
+
+
   - **Description**: A decorator that marks a class as a provider that can be injected into other classes via dependency injection.
   - **Usage**: Used to define a service class in NestJS.
   - **Example**:
