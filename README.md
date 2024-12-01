@@ -147,4 +147,4 @@ export function Serialize(dto: any) {
 
 
 Cookie-Session 
-Custom Decorators
+Custom Decorators and interceptors
