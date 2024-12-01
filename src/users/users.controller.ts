@@ -43,10 +43,15 @@ export class UsersController {
     }
   }
 
-
   @Get('/whoami')
   whoAmI(@Session() session: any) {
     return this.userService.findOne(session.userId);
+  }
+
+  @Get('/signout')
+  signOut(@Session() session: any) {
+    session.userId = null;
+    return 'you are signed out';
   }
 
   @Get()
