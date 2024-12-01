@@ -8,6 +8,7 @@ import {
   Post,
   Query,
   NotFoundException,
+  Session,
 } from '@nestjs/common';
 import { Serialize } from 'src/interceptors/serialize.interceptor';
 import { CreateUserDto } from './dtos/create-user.dto';
@@ -23,14 +24,29 @@ export class UsersController {
     private authService: AuthService,
   ) {}
   @Post('/signup')
-  createUser(@Body() body: CreateUserDto) {
+  async createUser(@Body() body: CreateUserDto, @Session() session: any) {
     // this.userService.create(body.email, body.password);
-    return this.authService.signUp(body.email, body.password);
+    session.userId = body.email;
+    const user = await this.authService.signUp(body.email, body.password);
+    if (user) {
+      session.userId = user.id;
+      return user;
+    }
   }
 
   @Post('/signin')
-  signIn(@Body() body: CreateUserDto) {
-    return this.authService.signIn(body.email, body.password);
+  async signIn(@Body() body: CreateUserDto, @Session() session: any) {
+    const user = await this.authService.signIn(body.email, body.password);
+    if (user) {
+      session.userId = user.id;
+      return user;
+    }
+  }
+
+
+  @Get('/whoami')
+  whoAmI(@Session() session: any) {
+    return this.userService.findOne(session.userId);
   }
 
   @Get()
