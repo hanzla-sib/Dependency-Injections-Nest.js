@@ -16,6 +16,7 @@ import { UpdateUserDto } from './dtos/UpdateUserDto';
 import { UsersService } from './users.service';
 import { UserDto } from './dtos/user.dto';
 import { AuthService } from './auth.service';
+import { CurrentUser } from './decorators/current-user.decorator';
 @Controller('auth')
 @Serialize(UserDto)
 export class UsersController {
@@ -35,7 +36,11 @@ export class UsersController {
   }
 
   @Post('/signin')
-  async signIn(@Body() body: CreateUserDto, @Session() session: any) {
+  async signIn(
+    @Body() body: CreateUserDto,
+    @Session() session: any,
+    @CurrentUser() currentuser: any,
+  ) {
     const user = await this.authService.signIn(body.email, body.password);
     if (user) {
       session.userId = user.id;
@@ -43,9 +48,14 @@ export class UsersController {
     }
   }
 
+  // @Get('/whoami')
+  // whoAmI(@Session() session: any) {
+  //   return this.userService.findOne(session.userId);
+  // }
+
   @Get('/whoami')
-  whoAmI(@Session() session: any) {
-    return this.userService.findOne(session.userId);
+  whoAmI(@CurrentUser() currentuser: any) {
+    return currentuser;
   }
 
   @Get('/signout')
