@@ -148,3 +148,8 @@ export function Serialize(dto: any) {
 
 Cookie-Session 
 Custom Decorators and interceptors
+  Decorators cannot able to call the Injectable services thats why we use Interceptors to call the injectable services and then use decorators
+Global Interceptors
+  this will make APP_INTERCEPTOR in module to be common for all files.
+
+Guards
