@@ -1,0 +1,12 @@
+Post https://localhost:3000/reports
+Content-Type: application/json
+
+{
+  price:1000,
+  make:"Toyota",
+  model:"Corolla",
+  year:2015,
+  mileage:10000,
+  lat: 37.7749,
+  lng: -122.4194
+}
